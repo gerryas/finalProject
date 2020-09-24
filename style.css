@@ -1,0 +1,84 @@
+.fadeOut {
+  opacity: 1;
+  transition: opacity 2s;
+}
+
+
+#startPage {
+  position: relative;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+  margin: auto;
+}
+
+#playDiv, #HowToDiv {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#playDiv {
+  background: url("./parallax-forest-0.jpg") no-repeat;
+  background-size: 100% 100%;
+  cursor: url("./Normal\ Select.cur"), crosshair;
+}
+
+#imgStart {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+#howTo, #play {
+  position: relative;
+  margin-top: 40%;
+  left: 35%;
+  padding: 2%;
+}
+
+#howTo {
+  background-color: #ffbd69;
+  margin-right: 5%;
+}
+
+#play {
+  background-color: #c72c41;
+  margin-left: 5%;
+}
+
+#enemy {
+  position: relative;
+  top: 40%;
+  left: 85%;
+  width: auto;
+  height: 40%;
+  transition: opacity 0.2s;
+  border: 0;
+  cursor: url("./Normal\ Select.cur"), crosshair;
+}
+
+
+
+.fadeIn {
+  position: relative;
+  top: 0;
+  opacity: 0;
+  transition: opacity 2s;
+  transition-delay: 2s;
+}
+
+input {
+  border:0;
+  outline:0;
+}
+
+input:focus {
+  outline:none!important;
+  cursor: url("./Normal\ Select.cur"), crosshair !important;
+}

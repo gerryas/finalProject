@@ -16,6 +16,18 @@
   margin: auto;
 }
 
+#title {
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 5rem;
+  font-weight: 900;
+  left: 0;
+  text-align: center;
+  padding: 1rem 1rem;
+  margin-left: 1.5rem;
+  color: #c72c41;
+  background: transparent;
+}
+
 #playDiv, #howToDiv, #playerScore {
   position: absolute;
   width: 100%;

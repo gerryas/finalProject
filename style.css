@@ -1,3 +1,7 @@
+* {
+  font-family: sans-serif;
+}
+
 .fadeOut {
   opacity: 1;
   transition: opacity 2s;
@@ -12,10 +16,14 @@
   margin: auto;
 }
 
-#playDiv, #HowToDiv {
+#playDiv, #howToDiv, #playerScore {
   position: absolute;
   width: 100%;
   height: 100%;
+}
+
+#howToDiv {
+  background-color: white;
 }
 
 #playDiv {
@@ -45,22 +53,38 @@
 #howTo {
   background-color: #ffbd69;
   margin-right: 5%;
+  font-size: 1.5rem;
 }
 
 #play {
   background-color: #c72c41;
   margin-left: 5%;
+  font-size: 1.5rem;
+}
+
+#play2 {
+  position: relative;
+  margin-top: 0%;
+  left: 45%;
+  padding: 2%;
+  background-color: #c72c41;
+  font-size: 1.5rem;
 }
 
 #enemy {
   position: relative;
   top: 40%;
-  left: 85%;
+  left: 60%;
   width: auto;
   height: 40%;
   transition: opacity 0.2s;
   border: 0;
+  padding: 0;
   cursor: url("./Normal\ Select.cur"), crosshair;
+  background-image: none;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 10rem auto;
 }
 
 
@@ -69,8 +93,7 @@
   position: relative;
   top: 0;
   opacity: 0;
-  transition: opacity 2s;
-  transition-delay: 2s;
+  transition: opacity 4s;
 }
 
 input {
@@ -81,4 +104,26 @@ input {
 input:focus {
   outline:none!important;
   cursor: url("./Normal\ Select.cur"), crosshair !important;
+}
+
+h1 {
+  position: absolute;
+  top: 1rem;
+  right: 3rem;
+  color: #a7d129;
+  font-size: xx-large;
+  background-color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 75%;
+}
+
+#howToDiv, #playerscore h2 {
+  text-align: center;
+  font-size: 5rem;
+  margin-top: 20%;
+}
+
+#howToDiv, #playerscore p {
+  text-align: center;
+  font-size: 3rem;
 }

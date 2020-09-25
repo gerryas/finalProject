@@ -1,8 +1,11 @@
+var bgmAudio = document.getElementById('bgm')
+var oldBgm = bgmAudio.src
 let flag = false
 
 function myFunction (str) {//fade in out
   document.getElementById(str).parentElement.style.opacity = '0'
   if (str === 'play' || str === 'play2') {
+    bgmAudio.src = ''
     document.getElementById('playDiv').style.opacity= '1'
     document.getElementById('playDiv').style.zIndex= '2'
   } else {
@@ -58,6 +61,7 @@ function scoring () {
     document.getElementById('playDiv').style.opacity= '0'
     document.getElementById('playDiv').style.zIndex= '0'
     playerScore ()
+    bgmAudio.src = oldBgm
   }
   document.getElementById('enemy').style.opacity = 0
   clearInterval(add)
@@ -75,6 +79,7 @@ function timerFunction () {
     document.getElementById('playDiv').style.opacity= '0'
     document.getElementById('playDiv').style.zIndex= '0'
     playerScore ()
+    bgmAudio.src = oldBgm
   } else {
     seconds--
     document.getElementById('timer').innerHTML = `<strong>${seconds}</strong>`

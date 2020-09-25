@@ -1,8 +1,6 @@
 var bgmAudio = document.getElementById('bgm')
 var oldBgm = bgmAudio.src
 
-let flag = false
-
 function myFunction (str) {//fade in out
   document.getElementById(str).parentElement.style.opacity = '0'
   if (str === 'play' || str === 'play2') {
@@ -13,11 +11,6 @@ function myFunction (str) {//fade in out
     document.getElementById('howToDiv').style.opacity= '1'
     document.getElementById('howToDiv').style.zIndex= '1'
   }
-  flag = true
-}
-
-if (flag) {
-  document.getElementById('startPage').style.display = 'none'
 }
 
 function playAudio(url) {
@@ -48,7 +41,6 @@ enemy.addEventListener("click", scoring)
 enemy.addEventListener("click", startTimer)
 
 let seconds = 59
-let flag2 = false
 function scoring () {
   enemy.style.backgroundImage = 'url("./daedf413619e847.png")'
   score++
@@ -63,7 +55,6 @@ function scoring () {
     document.getElementById('playDiv').style.zIndex= '0'
     playerScore ()
     bgmAudio.src = oldBgm
-    flag2 = true
   }
   document.getElementById('enemy').style.opacity = 0
   clearInterval(add)
@@ -82,17 +73,12 @@ function timerFunction () {
     document.getElementById('playDiv').style.zIndex= '0'
     playerScore ()
     bgmAudio.src = oldBgm
-    flag2 = true
   } else {
     seconds--
     document.getElementById('timer').innerHTML = `<strong>${seconds}</strong>`
   }
 }
 
-if(flag2) {
-  document.getElementById('playDiv').style.display = 'none'
-  document.getElementById('howToDiv').style.display = 'none'
-}
 function startTimer () {
   timer = setInterval (timerFunction, 1000)
   enemy.removeEventListener("click", startTimer)

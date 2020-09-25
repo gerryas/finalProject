@@ -155,8 +155,28 @@ h1 {
 }
 
 #playerscore h2 {
+  position: absolute;
+  top: 10%;
+  left: 40%;
   margin-bottom: 0;
   padding-bottom: 0;
+}
+
+#playerscore h2 {
+  position: absolute;
+  top: 0%;
+  left: 37.5%;
+}
+
+#scoring {
+  position: absolute;
+  top: 30%;
+  left: 42.5%;
+}
+
+#reload {
+  position: absolute;
+  top: 80%;
 }
 
 #howToDiv, #playerscore p {

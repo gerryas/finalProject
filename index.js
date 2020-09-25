@@ -1,4 +1,3 @@
-let bgm = document.getElementById('bgm').autoplay
 let flag = false
 
 function myFunction (str) {//fade in out

@@ -85,6 +85,14 @@
   font-size: 1.5rem;
 }
 
+#reload {
+  position: relative;
+  left: 46%;
+  padding: 1%;
+  background-color: #6f0000;
+  font-size: 1.5rem;
+}
+
 #play2 {
   position: relative;
   margin-top: 0%;

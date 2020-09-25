@@ -1,5 +1,6 @@
 var bgmAudio = document.getElementById('bgm')
 var oldBgm = bgmAudio.src
+
 let flag = false
 
 function myFunction (str) {//fade in out

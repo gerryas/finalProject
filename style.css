@@ -9,11 +9,13 @@
 
 
 #startPage {
-  position: relative;
+  position: absolute;
   width: 100%;
-  height: auto;
+  height: 100%;
   z-index: 1;
   margin: auto;
+  background: url("./ak47.gif") no-repeat;
+  background-size: 100% 100%;
 }
 
 #title {
@@ -68,8 +70,8 @@
 
 #howTo, #play {
   position: relative;
-  margin-top: 40%;
-  left: 35%;
+  margin-top: 35%;
+  left: 32.5%;
   padding: 2%;
 }
 
@@ -171,12 +173,19 @@ h1 {
 #scoring {
   position: absolute;
   top: 30%;
+  left: 47.5%;
+}
+
+#rank {
+  position: absolute;
+  top: 50%;
   left: 42.5%;
+  width: 15%;
 }
 
 #reload {
   position: absolute;
-  top: 80%;
+  top: 90%;
 }
 
 #howToDiv, #playerscore p {

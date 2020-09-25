@@ -48,7 +48,7 @@ enemy.addEventListener("click", scoring)
 enemy.addEventListener("click", startTimer)
 
 let seconds = 59
-
+let flag2 = false
 function scoring () {
   enemy.style.backgroundImage = 'url("./daedf413619e847.png")'
   score++
@@ -63,6 +63,7 @@ function scoring () {
     document.getElementById('playDiv').style.zIndex= '0'
     playerScore ()
     bgmAudio.src = oldBgm
+    flag2 = true
   }
   document.getElementById('enemy').style.opacity = 0
   clearInterval(add)
@@ -81,13 +82,17 @@ function timerFunction () {
     document.getElementById('playDiv').style.zIndex= '0'
     playerScore ()
     bgmAudio.src = oldBgm
+    flag2 = true
   } else {
     seconds--
     document.getElementById('timer').innerHTML = `<strong>${seconds}</strong>`
   }
 }
 
-
+if(flag2) {
+  document.getElementById('playDiv').style.display = 'none'
+  document.getElementById('howToDiv').style.display = 'none'
+}
 function startTimer () {
   timer = setInterval (timerFunction, 1000)
   enemy.removeEventListener("click", startTimer)
@@ -101,11 +106,12 @@ function playerScore () {
   document.getElementById('scoring').style.fontSize = '4rem'
   let rank = ''
   if (score < 30) {
-    rank = 'https://media4.giphy.com/media/WyrdDeIxGOlQA/giphy.gif'
+    rank = './noob.gif'
   } else if (score < 41) {
-    rank = 'http://replygif.net/i/1082.gif'
+    rank = './decent.gif'
   } else {
-    rank = 'https://i.gifer.com/EmJu.gif'
+    rank = './pro.gif'
   }
-  document.getElementById('scoring').innerHTML = `<strong>${score}</strong><br><img src=${rank}>` 
+  document.getElementById('scoring').innerHTML = `<strong>${score}</strong>`
+  document.getElementById('rank').src = rank 
 }

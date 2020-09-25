@@ -35,13 +35,24 @@
 }
 
 #howToDiv {
-  background-color: white;
+  color: #dbcbbd;
+  background: url("https://img.itch.zone/aW1nLzE1ODQ3NjkucG5n/original/70XMId.png") no-repeat;
+  background-size: 100% 100%;
 }
 
 #playDiv {
-  background: url("./parallax-forest-0.jpg") no-repeat;
+  background: url("https://unluckystudio.com/wp-content/uploads/2019/05/5.png") no-repeat;
   background-size: 100% 100%;
   cursor: url("./Normal\ Select.cur"), crosshair;
+}
+
+#playerScore {
+  background: url("./liliana-pita-desertpixelsmall.jpg") no-repeat;
+  background-size: 100% 100%;
+}
+
+#playerScore p {
+  font-family: 'Gloria Hallelujah', cursive;
 }
 
 #imgStart {
@@ -128,7 +139,8 @@ h1 {
   border-radius: 75%;
 }
 
-#howToDiv, #playerscore h2 {
+#howToDiv h2, #playerscore h2 {
+  font-family: 'Gloria Hallelujah', cursive;
   text-align: center;
   font-size: 5rem;
   margin-top: 10%;

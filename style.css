@@ -148,9 +148,14 @@ h1 {
 
 #playerscore h2 {
   margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 #howToDiv, #playerscore p {
   text-align: center;
   font-size: 3rem;
+}
+
+#timer {
+  background-color: #383e56;
 }

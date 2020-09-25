@@ -1,3 +1,4 @@
+let bgm = document.getElementById('bgm').autoplay
 let flag = false
 
 function myFunction (str) {//fade in out
@@ -42,12 +43,11 @@ function gameFunction () {
 
 enemy.addEventListener("click", scoring)
 enemy.addEventListener("click", startTimer)
-enemy.addEventListener("click", playAudio('url("./Smashing-Yuri_Santana-1233262689.mp3")'))
 
 let seconds = 59
 
 function scoring () {
-  enemy.style.backgroundImage = 'url("http://pixelartmaker.com/art/daedf413619e847.png")'
+  enemy.style.backgroundImage = 'url("./daedf413619e847.png")'
   score++
   if (num > 500) {
     num -= 250
@@ -82,6 +82,7 @@ function timerFunction () {
   }
 }
 
+
 function startTimer () {
   timer = setInterval (timerFunction, 1000)
   enemy.removeEventListener("click", startTimer)
@@ -92,7 +93,6 @@ function start () {
 }
 
 function playerScore () {
-  document.getElementById('scoring').style.paddingTop = '-1rem'
   document.getElementById('scoring').style.fontSize = '4rem'
   let rank = ''
   if (score < 30) {
